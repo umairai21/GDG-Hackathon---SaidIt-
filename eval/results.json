@@ -1,0 +1,5445 @@
+{
+ "queries": [
+  {
+   "id": "1",
+   "query": "milk",
+   "type": "english",
+   "expected": [
+    "milk"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Rawabi Fresh Milk"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Full Fat Fresh Milk"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Full Fat Fresh Milk"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "milk:sure"
+   ]
+  },
+  {
+   "id": "2",
+   "query": "yoghurt",
+   "type": "english",
+   "expected": [
+    "yogurt"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Marmum Fresh Yoghurt"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Fresh Yoghurt Full Fat"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Fresh Yoghurt Full Fat"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "yoghurt:sure"
+   ]
+  },
+  {
+   "id": "3",
+   "query": "yougurt 1kg",
+   "type": "english",
+   "expected": [
+    "yogurt"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Fresh Yoghurt Full Fat"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Almarai Fresh Yoghurt Full Fat"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "yougurt:guessed"
+   ]
+  },
+  {
+   "id": "4",
+   "query": "basmati rice 5kg",
+   "type": "english",
+   "expected": [
+    "rice"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "India Gate Classic Basmati Rice"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "India Gate Classic Basmati Rice"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "basmati:sure",
+    "rice:sure"
+   ]
+  },
+  {
+   "id": "5",
+   "query": "arabic bread",
+   "type": "english",
+   "expected": [
+    "bread"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Lusine Arabic Bread Brown"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Modern Bakery Arabic Bread White"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Modern Bakery Arabic Bread White"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "arabic:sure",
+    "bread:sure"
+   ]
+  },
+  {
+   "id": "6",
+   "query": "chiken breast",
+   "type": "english",
+   "expected": [
+    "chicken"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Sadia Chicken Breast Fillet"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Sadia Chicken Breast Fillet"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "chiken:guessed",
+    "breast:sure"
+   ]
+  },
+  {
+   "id": "7",
+   "query": "tomatos",
+   "type": "english",
+   "expected": [
+    "tomato"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Heinz Tomato Ketchup"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Fresh Tomatoes"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "tomatos:guessed"
+   ]
+  },
+  {
+   "id": "8",
+   "query": "potatos",
+   "type": "english",
+   "expected": [
+    "potato"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Fresh Potatoes"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Fresh Potatoes"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "potatos:guessed"
+   ]
+  },
+  {
+   "id": "9",
+   "query": "onoin",
+   "type": "english",
+   "expected": [
+    "onion"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Almarai Cooking Cream"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Red Onions"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "onoin:guessed"
+   ]
+  },
+  {
+   "id": "10",
+   "query": "bananna",
+   "type": "english",
+   "expected": [
+    "banana"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Bananas Philippines"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Bananas Philippines"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "bananna:guessed"
+   ]
+  },
+  {
+   "id": "11",
+   "query": "cardamon",
+   "type": "english",
+   "expected": [
+    "cardamom"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Instant Karak Premix with Cardamom"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Whole Green Cardamom"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "cardamon:guessed"
+   ]
+  },
+  {
+   "id": "12",
+   "query": "tumeric",
+   "type": "english",
+   "expected": [
+    "turmeric"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Everest Turmeric Powder"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Everest Turmeric Powder"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "tumeric:guessed"
+   ]
+  },
+  {
+   "id": "13",
+   "query": "corriander",
+   "type": "english",
+   "expected": [
+    "coriander"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Fresh Coriander Bunch"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Fresh Coriander Bunch"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "corriander:guessed"
+   ]
+  },
+  {
+   "id": "14",
+   "query": "olive oil 1 litre",
+   "type": "english",
+   "expected": [
+    "olive_oil"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Wadi Al Akhdar Extra Virgin Olive Oil"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Borges Pure Olive Oil"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "olive:sure",
+    "oil:sure"
+   ]
+  },
+  {
+   "id": "15",
+   "query": "washing powder",
+   "type": "english",
+   "expected": [
+    "detergent"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Ariel Washing Powder"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Ariel Washing Powder"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Ariel Washing Powder"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "washing:sure",
+    "powder:sure"
+   ]
+  },
+  {
+   "id": "16",
+   "query": "green chillies",
+   "type": "english",
+   "expected": [
+    "green_chili"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Green Chilli"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Green Chilli"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "green:sure",
+    "chillies:sure"
+   ]
+  },
+  {
+   "id": "17",
+   "query": "brinjal",
+   "type": "english",
+   "expected": [
+    "eggplant"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Dettol Original Soap Bar"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Eggplant"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "brinjal:sure"
+   ]
+  },
+  {
+   "id": "18",
+   "query": "lady finger",
+   "type": "english",
+   "expected": [
+    "okra"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Fresh Okra"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "lady:sure",
+    "finger:sure"
+   ]
+  },
+  {
+   "id": "19",
+   "query": "curd",
+   "type": "english",
+   "expected": [
+    "yogurt"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Whole Green Cardamom"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Fresh Yoghurt Full Fat"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "curd:sure"
+   ]
+  },
+  {
+   "id": "20",
+   "query": "cheddar slices",
+   "type": "english",
+   "expected": [
+    "cheese"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Kraft Cheddar Cheese Slices"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Kraft Cheddar Cheese Slices"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Kraft Cheddar Cheese Slices"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "cheddar:sure",
+    "slices:sure"
+   ]
+  },
+  {
+   "id": "21",
+   "query": "mineral water 1.5L",
+   "type": "english",
+   "expected": [
+    "water"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Masafi Mineral Water"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Masafi Mineral Water"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "mineral:sure",
+    "water:sure"
+   ]
+  },
+  {
+   "id": "22",
+   "query": "karak tea",
+   "type": "english",
+   "expected": [
+    "karak_tea"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Alokozay Karak Tea Bags"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Alokozay Karak Tea Bags"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Alokozay Karak Tea Bags"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "karak:sure",
+    "tea:sure"
+   ]
+  },
+  {
+   "id": "23",
+   "query": "medjool dates",
+   "type": "english",
+   "expected": [
+    "dates"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Medjool Dates"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Medjool Dates"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Medjool Dates"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "medjool:sure",
+    "dates:sure"
+   ]
+  },
+  {
+   "id": "24",
+   "query": "hummus",
+   "type": "english",
+   "expected": [
+    "chickpeas",
+    "hummus"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Wadi Al Akhdar Hummus Tahina"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Wadi Al Akhdar Hummus Tahina"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Al Wadi Al Akhdar Hummus Tahina"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "hummus:guessed"
+   ]
+  },
+  {
+   "id": "25",
+   "query": "instant coffee",
+   "type": "english",
+   "expected": [
+    "coffee"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Nescafe Classic Instant Coffee"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Nescafe Classic Instant Coffee"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Nescafe Classic Instant Coffee"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "instant:sure",
+    "coffee:sure"
+   ]
+  },
+  {
+   "id": "26",
+   "query": "dahi",
+   "type": "roman_urdu",
+   "expected": [
+    "yogurt"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Aashirvaad Whole Wheat Atta"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Fresh Yoghurt Full Fat"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "dahi:sure"
+   ]
+  },
+  {
+   "id": "27",
+   "query": "dahee",
+   "type": "roman_urdu",
+   "expected": [
+    "yogurt"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Amul Pure Ghee"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Almarai Fresh Yoghurt Full Fat"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "dahee:guessed"
+   ]
+  },
+  {
+   "id": "28",
+   "query": "doodh 2 litre",
+   "type": "roman_urdu",
+   "expected": [
+    "milk"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Low Fat Fresh Milk"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "doodh:sure"
+   ]
+  },
+  {
+   "id": "29",
+   "query": "dudh",
+   "type": "roman_urdu",
+   "expected": [
+    "milk"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Full Fat Fresh Milk"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "dudh:sure"
+   ]
+  },
+  {
+   "id": "30",
+   "query": "chaawal",
+   "type": "roman_urdu",
+   "expected": [
+    "rice"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Daawat Traditional Basmati Rice"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "India Gate Classic Basmati Rice"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "chaawal:sure"
+   ]
+  },
+  {
+   "id": "31",
+   "query": "anday 1 dozen",
+   "type": "roman_urdu",
+   "expected": [
+    "eggs"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Jazira Fresh White Eggs Large"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "anday:sure"
+   ]
+  },
+  {
+   "id": "32",
+   "query": "andey",
+   "type": "roman_urdu",
+   "expected": [
+    "eggs"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Fresh Coriander Bunch"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Al Jazira Fresh White Eggs Large"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "andey:guessed"
+   ]
+  },
+  {
+   "id": "33",
+   "query": "murghi",
+   "type": "roman_urdu",
+   "expected": [
+    "chicken"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Amul Pure Ghee"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Islami Frozen Whole Chicken"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "murghi:sure"
+   ]
+  },
+  {
+   "id": "34",
+   "query": "gosht",
+   "type": "roman_urdu",
+   "expected": [
+    "meat"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Fresh Australian Lamb Chops"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "gosht:sure"
+   ]
+  },
+  {
+   "id": "35",
+   "query": "machhli",
+   "type": "roman_urdu",
+   "expected": [
+    "fish"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Oman Chips Chilli"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Fresh Hamour Fillet"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "machhli:sure"
+   ]
+  },
+  {
+   "id": "36",
+   "query": "atta 10 kilo",
+   "type": "roman_urdu",
+   "expected": [
+    "atta",
+    "flour"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Aashirvaad Whole Wheat Atta"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Aashirvaad Whole Wheat Atta"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "atta:sure"
+   ]
+  },
+  {
+   "id": "37",
+   "query": "cheeni 2 kilo",
+   "type": "roman_urdu",
+   "expected": [
+    "sugar"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Khaleej White Sugar"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "cheeni:sure"
+   ]
+  },
+  {
+   "id": "38",
+   "query": "namak",
+   "type": "roman_urdu",
+   "expected": [
+    "salt"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Almarai Full Fat Fresh Milk"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Osra Iodised Table Salt"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "namak:sure"
+   ]
+  },
+  {
+   "id": "39",
+   "query": "piyaaz",
+   "type": "roman_urdu",
+   "expected": [
+    "onion"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Red Onions"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "piyaaz:guessed"
+   ]
+  },
+  {
+   "id": "40",
+   "query": "tamaatar",
+   "type": "roman_urdu",
+   "expected": [
+    "tomato"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Malabar Paratha Frozen"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Fresh Tomatoes"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "tamaatar:guessed"
+   ]
+  },
+  {
+   "id": "41",
+   "query": "aaloo",
+   "type": "roman_urdu",
+   "expected": [
+    "potato"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Alokozay Green Tea Bags"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Fresh Potatoes"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "aaloo:guessed"
+   ]
+  },
+  {
+   "id": "42",
+   "query": "lehsan",
+   "type": "roman_urdu",
+   "expected": [
+    "garlic"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Al Osra Iodised Table Salt"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Garlic China"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "lehsan:guessed"
+   ]
+  },
+  {
+   "id": "43",
+   "query": "adrak",
+   "type": "roman_urdu",
+   "expected": [
+    "ginger"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Alokozay Karak Tea Bags"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Fresh Ginger"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "adrak:sure"
+   ]
+  },
+  {
+   "id": "44",
+   "query": "nimbu",
+   "type": "roman_urdu",
+   "expected": [
+    "lemon"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Fresh Pakistani Mutton"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Fresh Lemons"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "nimbu:sure"
+   ]
+  },
+  {
+   "id": "45",
+   "query": "hari mirch",
+   "type": "roman_urdu",
+   "expected": [
+    "green_chili"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Green Chilli"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "hari:sure",
+    "mirch:sure"
+   ]
+  },
+  {
+   "id": "46",
+   "query": "dhanya",
+   "type": "roman_urdu",
+   "expected": [
+    "coriander"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Daawat Traditional Basmati Rice"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Fresh Coriander Bunch"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "dhanya:guessed"
+   ]
+  },
+  {
+   "id": "47",
+   "query": "pudeena",
+   "type": "roman_urdu",
+   "expected": [
+    "mint"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Fresh Mint Bunch"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "pudeena:guessed"
+   ]
+  },
+  {
+   "id": "48",
+   "query": "bhindi",
+   "type": "roman_urdu",
+   "expected": [
+    "okra"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "India Gate Classic Basmati Rice"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Fresh Okra"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "bhindi:sure"
+   ]
+  },
+  {
+   "id": "49",
+   "query": "bengun",
+   "type": "roman_urdu",
+   "expected": [
+    "eggplant"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Eggplant"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "bengun:guessed"
+   ]
+  },
+  {
+   "id": "50",
+   "query": "palak",
+   "type": "roman_urdu",
+   "expected": [
+    "spinach"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Al Wadi Al Akhdar Extra Virgin Olive Oil"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Fresh Spinach"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "palak:sure"
+   ]
+  },
+  {
+   "id": "51",
+   "query": "kelay",
+   "type": "roman_urdu",
+   "expected": [
+    "banana"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Brooke Bond Red Label Loose Tea"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Bananas Philippines"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "kelay:guessed"
+   ]
+  },
+  {
+   "id": "52",
+   "query": "khujoor",
+   "type": "roman_urdu",
+   "expected": [
+    "dates"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Khalas Dates"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "khujoor:guessed"
+   ]
+  },
+  {
+   "id": "53",
+   "query": "ilaychi",
+   "type": "roman_urdu",
+   "expected": [
+    "cardamom"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Sadia Chicken Breast Fillet"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Whole Green Cardamom"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "ilaychi:guessed"
+   ]
+  },
+  {
+   "id": "54",
+   "query": "haldi",
+   "type": "roman_urdu",
+   "expected": [
+    "turmeric"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Egyptian Baladi Bread"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Everest Turmeric Powder"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "haldi:sure"
+   ]
+  },
+  {
+   "id": "55",
+   "query": "jeera",
+   "type": "roman_urdu",
+   "expected": [
+    "cumin"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Amul Fresh Paneer"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Whole Cumin Seeds"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "jeera:sure"
+   ]
+  },
+  {
+   "id": "56",
+   "query": "daal masoor",
+   "type": "roman_urdu",
+   "expected": [
+    "lentils"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Red Lentils Masoor Dal"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Red Lentils Masoor Dal"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "daal:sure",
+    "masoor:sure"
+   ]
+  },
+  {
+   "id": "57",
+   "query": "chanay",
+   "type": "roman_urdu",
+   "expected": [
+    "chickpeas"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Garlic China"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Kabuli Chickpeas Dry"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "chanay:guessed"
+   ]
+  },
+  {
+   "id": "58",
+   "query": "rajma",
+   "type": "roman_urdu",
+   "expected": [
+    "kidney_beans"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Almarai Full Fat Fresh Milk"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Red Kidney Beans"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "rajma:sure"
+   ]
+  },
+  {
+   "id": "59",
+   "query": "desi ghee",
+   "type": "roman_urdu",
+   "expected": [
+    "ghee"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Amul Pure Ghee"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Amul Pure Ghee"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "desi:sure",
+    "ghee:sure"
+   ]
+  },
+  {
+   "id": "60",
+   "query": "makhan",
+   "type": "roman_urdu",
+   "expected": [
+    "butter"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Al Wadi Al Akhdar Extra Virgin Olive Oil"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Lurpak Unsalted Butter"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "makhan:sure"
+   ]
+  },
+  {
+   "id": "61",
+   "query": "chai patti",
+   "type": "roman_urdu",
+   "expected": [
+    "tea"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Fresh Whole Wheat Chapati"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Lipton Yellow Label Black Tea Bags"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "chai:sure",
+    "patti:sure"
+   ]
+  },
+  {
+   "id": "62",
+   "query": "doodh patti",
+   "type": "roman_urdu",
+   "expected": [
+    "tea"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Almarai Full Fat Fresh Milk"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "doodh:sure",
+    "patti:sure"
+   ]
+  },
+  {
+   "id": "63",
+   "query": "sabun",
+   "type": "roman_urdu",
+   "expected": [
+    "soap"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Abu Kass Basmati Rice"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Lux Soft Touch Soap Bar"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "sabun:sure"
+   ]
+  },
+  {
+   "id": "64",
+   "query": "surf",
+   "type": "roman_urdu",
+   "expected": [
+    "detergent"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Surf Excel Washing Powder"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Surf Excel Washing Powder"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Surf Excel Washing Powder"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "surf:sure"
+   ]
+  },
+  {
+   "id": "65",
+   "query": "cold drink",
+   "type": "roman_urdu",
+   "expected": [
+    "soft_drink"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Pepsi Cola Can"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "cold:sure",
+    "drink:sure"
+   ]
+  },
+  {
+   "id": "66",
+   "query": "double roti",
+   "type": "roman_urdu",
+   "expected": [
+    "bread"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Sunny Vegetable Oil"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Modern Bakery Arabic Bread White"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "double:sure",
+    "roti:sure"
+   ]
+  },
+  {
+   "id": "67",
+   "query": "parathay",
+   "type": "roman_urdu",
+   "expected": [
+    "paratha"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Kawan Plain Paratha"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Kawan Plain Paratha"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "parathay:guessed"
+   ]
+  },
+  {
+   "id": "68",
+   "query": "3eish",
+   "type": "arabizi",
+   "expected": [
+    "bread",
+    "rice"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Farm Fresh Brown Eggs"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "India Gate Classic Basmati Rice"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "3eish:guessed"
+   ]
+  },
+  {
+   "id": "69",
+   "query": "3aish",
+   "type": "arabizi",
+   "expected": [
+    "bread",
+    "rice"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Spanish Saffron"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "India Gate Classic Basmati Rice"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "3aish:guessed"
+   ]
+  },
+  {
+   "id": "70",
+   "query": "5obz",
+   "type": "arabizi",
+   "expected": [
+    "bread"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Modern Bakery Arabic Bread White"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "5obz:guessed"
+   ]
+  },
+  {
+   "id": "71",
+   "query": "7aleeb",
+   "type": "arabizi",
+   "expected": [
+    "milk"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Al Khaleej White Sugar"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Full Fat Fresh Milk"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "7aleeb:sure"
+   ]
+  },
+  {
+   "id": "72",
+   "query": "7lib",
+   "type": "arabizi",
+   "expected": [
+    "milk"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Green Chilli"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Almarai Full Fat Fresh Milk"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "7lib:guessed"
+   ]
+  },
+  {
+   "id": "73",
+   "query": "leban",
+   "type": "arabizi",
+   "expected": [
+    "laban"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Laban Full Fat"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Almarai Laban Full Fat"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "leban:guessed"
+   ]
+  },
+  {
+   "id": "74",
+   "query": "laban zabadi",
+   "type": "arabizi",
+   "expected": [
+    "yogurt"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Almarai Laban Full Fat"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Fresh Yoghurt Full Fat"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "laban:sure",
+    "zabadi:sure"
+   ]
+  },
+  {
+   "id": "75",
+   "query": "rob",
+   "type": "arabizi",
+   "expected": [
+    "yogurt"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Royal Gala Red Apples"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Fresh Yoghurt Full Fat"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "rob:sure"
+   ]
+  },
+  {
+   "id": "76",
+   "query": "lebne",
+   "type": "arabizi",
+   "expected": [
+    "labneh"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Labneh Full Fat"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Almarai Labneh Full Fat"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "lebne:guessed"
+   ]
+  },
+  {
+   "id": "77",
+   "query": "jebneh",
+   "type": "arabizi",
+   "expected": [
+    "cheese"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Al Rawabi Labneh"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Kraft Cheddar Cheese Slices"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "jebneh:guessed"
+   ]
+  },
+  {
+   "id": "78",
+   "query": "zibda",
+   "type": "arabizi",
+   "expected": [
+    "butter"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Lurpak Unsalted Butter"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "zibda:sure"
+   ]
+  },
+  {
+   "id": "79",
+   "query": "baidh",
+   "type": "arabizi",
+   "expected": [
+    "eggs"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Mai Dubai Drinking Water"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Jazira Fresh White Eggs Large"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "baidh:sure"
+   ]
+  },
+  {
+   "id": "80",
+   "query": "djej",
+   "type": "arabizi",
+   "expected": [
+    "chicken"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Dettol Original Soap Bar"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Al Islami Frozen Whole Chicken"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "djej:guessed"
+   ]
+  },
+  {
+   "id": "81",
+   "query": "la7am",
+   "type": "arabizi",
+   "expected": [
+    "meat"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Fresh Australian Lamb Chops"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "la7am:guessed"
+   ]
+  },
+  {
+   "id": "82",
+   "query": "samak",
+   "type": "arabizi",
+   "expected": [
+    "fish"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Almarai Full Fat Fresh Milk"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Fresh Hamour Fillet"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "samak:sure"
+   ]
+  },
+  {
+   "id": "83",
+   "query": "roz",
+   "type": "arabizi",
+   "expected": [
+    "rice"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Malabar Paratha Frozen"
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Malabar Paratha Frozen"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "India Gate Classic Basmati Rice"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "roz:sure"
+   ]
+  },
+  {
+   "id": "84",
+   "query": "mel7",
+   "type": "arabizi",
+   "expected": [
+    "salt"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Watermelon"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Osra Iodised Table Salt"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "mel7:sure"
+   ]
+  },
+  {
+   "id": "85",
+   "query": "zeit zaitoon",
+   "type": "arabizi",
+   "expected": [
+    "olive_oil"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Al Wadi Al Akhdar Extra Virgin Olive Oil"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "zeit:guessed",
+    "zaitoon:guessed"
+   ]
+  },
+  {
+   "id": "86",
+   "query": "ba9al",
+   "type": "arabizi",
+   "expected": [
+    "onion"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Egyptian Baladi Bread"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Red Onions"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "ba9al:guessed"
+   ]
+  },
+  {
+   "id": "87",
+   "query": "6ama6",
+   "type": "arabizi",
+   "expected": [
+    "tomato"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Almarai Full Fat Fresh Milk"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Fresh Tomatoes"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "6ama6:guessed"
+   ]
+  },
+  {
+   "id": "88",
+   "query": "toum",
+   "type": "arabizi",
+   "expected": [
+    "garlic"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Almarai Halloumi Cheese"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Garlic China"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "toum:guessed"
+   ]
+  },
+  {
+   "id": "89",
+   "query": "laimoon",
+   "type": "arabizi",
+   "expected": [
+    "lemon"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Nada Greek Yoghurt Plain"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Fresh Lemons"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "laimoon:guessed"
+   ]
+  },
+  {
+   "id": "90",
+   "query": "5iyar",
+   "type": "arabizi",
+   "expected": [
+    "cucumber"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Cucumber"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "5iyar:sure"
+   ]
+  },
+  {
+   "id": "91",
+   "query": "batinjan",
+   "type": "arabizi",
+   "expected": [
+    "eggplant"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Bananas Philippines"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Eggplant"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "batinjan:guessed"
+   ]
+  },
+  {
+   "id": "92",
+   "query": "tuffa7",
+   "type": "arabizi",
+   "expected": [
+    "apple"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Royal Gala Red Apples"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "tuffa7:guessed"
+   ]
+  },
+  {
+   "id": "93",
+   "query": "ra6ab",
+   "type": "arabizi",
+   "expected": [
+    "dates"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Al Rawabi Fresh Milk"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Khalas Dates"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "ra6ab:guessed"
+   ]
+  },
+  {
+   "id": "94",
+   "query": "bateekh",
+   "type": "arabizi",
+   "expected": [
+    "watermelon"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Khalas Dates"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Watermelon"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "bateekh:sure"
+   ]
+  },
+  {
+   "id": "95",
+   "query": "shai",
+   "type": "arabizi",
+   "expected": [
+    "tea"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Shan Biryani Masala"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Lipton Yellow Label Black Tea Bags"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "shai:sure"
+   ]
+  },
+  {
+   "id": "96",
+   "query": "8ahwa",
+   "type": "arabizi",
+   "expected": [
+    "arabic_coffee"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Kawan Plain Paratha"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Ameed Arabic Coffee with Cardamom"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "8ahwa:sure"
+   ]
+  },
+  {
+   "id": "97",
+   "query": "3asal",
+   "type": "arabizi",
+   "expected": [
+    "honey"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Shan Biryani Masala"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Shifa Natural Honey"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "3asal:sure"
+   ]
+  },
+  {
+   "id": "98",
+   "query": "3aseer burtuqal",
+   "type": "arabizi",
+   "expected": [
+    "juice"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Valencia Oranges Egypt"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "3aseer:sure",
+    "burtuqal:sure"
+   ]
+  },
+  {
+   "id": "99",
+   "query": "bebsi",
+   "type": "arabizi",
+   "expected": [
+    "soft_drink"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Fresh Beef Cubes"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Pepsi Cola Can"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "bebsi:sure"
+   ]
+  },
+  {
+   "id": "100",
+   "query": "chibs",
+   "type": "arabizi",
+   "expected": [
+    "chips"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Lays Salted Potato Chips"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Lays Salted Potato Chips"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "chibs:sure"
+   ]
+  },
+  {
+   "id": "101",
+   "query": "حليب",
+   "type": "arabic",
+   "expected": [
+    "milk"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Rawabi Fresh Milk"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Full Fat Fresh Milk"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Full Fat Fresh Milk"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "حليب:sure"
+   ]
+  },
+  {
+   "id": "102",
+   "query": "الحليب ٢ لتر",
+   "type": "arabic",
+   "expected": [
+    "milk"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Full Fat Fresh Milk"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Low Fat Fresh Milk"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "الحليب:sure"
+   ]
+  },
+  {
+   "id": "103",
+   "query": "لبن",
+   "type": "arabic",
+   "expected": [
+    "laban"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Lacnor Laban"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Al Rawabi Plain Yoghurt"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Laban Full Fat"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "لبن:sure"
+   ]
+  },
+  {
+   "id": "104",
+   "query": "روب",
+   "type": "arabic",
+   "expected": [
+    "yogurt"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Al Ain Drinking Water"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Fresh Yoghurt Full Fat"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "روب:sure"
+   ]
+  },
+  {
+   "id": "105",
+   "query": "زبده",
+   "type": "arabic",
+   "expected": [
+    "butter"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Lurpak Unsalted Butter"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Lurpak Unsalted Butter"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "زبده:sure"
+   ]
+  },
+  {
+   "id": "106",
+   "query": "بيض ٣٠ حبة",
+   "type": "arabic",
+   "expected": [
+    "eggs"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Jazira Fresh White Eggs Large"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Jazira Fresh White Eggs Large"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "بيض:sure"
+   ]
+  },
+  {
+   "id": "107",
+   "query": "فراخ",
+   "type": "arabic",
+   "expected": [
+    "chicken"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Lipton Yellow Label Black Tea Bags"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Islami Frozen Whole Chicken"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "فراخ:sure"
+   ]
+  },
+  {
+   "id": "108",
+   "query": "صيد",
+   "type": "arabic",
+   "expected": [
+    "fish"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Sadia Chicken Breast Fillet"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Fresh Hamour Fillet"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "صيد:sure"
+   ]
+  },
+  {
+   "id": "109",
+   "query": "عيش",
+   "type": "arabic",
+   "expected": [
+    "bread",
+    "rice"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Egyptian Baladi Bread"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Egyptian Baladi Bread"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Egyptian Baladi Bread"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "عيش:guessed"
+   ]
+  },
+  {
+   "id": "110",
+   "query": "الأرز البسمتي",
+   "type": "arabic",
+   "expected": [
+    "rice"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "India Gate Classic Basmati Rice"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "India Gate Classic Basmati Rice"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "الأرز:sure",
+    "البسمتي:sure"
+   ]
+  },
+  {
+   "id": "111",
+   "query": "طحين",
+   "type": "arabic",
+   "expected": [
+    "flour"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Al Wadi Al Akhdar Tahina"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Aashirvaad Whole Wheat Atta"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Aashirvaad Whole Wheat Atta"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "طحين:sure"
+   ]
+  },
+  {
+   "id": "112",
+   "query": "زيت زيتون",
+   "type": "arabic",
+   "expected": [
+    "olive_oil"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Sliced Black Olives"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Wadi Al Akhdar Extra Virgin Olive Oil"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Wadi Al Akhdar Extra Virgin Olive Oil"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "زيت:sure",
+    "زيتون:sure"
+   ]
+  },
+  {
+   "id": "113",
+   "query": "طماط",
+   "type": "arabic",
+   "expected": [
+    "tomato"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Fresh Tomatoes"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Fresh Tomatoes"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Fresh Tomatoes"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "طماط:sure"
+   ]
+  },
+  {
+   "id": "114",
+   "query": "كزبره",
+   "type": "arabic",
+   "expected": [
+    "coriander"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Fresh Coriander Bunch"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Fresh Coriander Bunch"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "كزبره:sure"
+   ]
+  },
+  {
+   "id": "115",
+   "query": "شاهي",
+   "type": "arabic",
+   "expected": [
+    "tea"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Lipton Yellow Label Black Tea Bags"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Lipton Yellow Label Black Tea Bags"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "شاهي:sure"
+   ]
+  },
+  {
+   "id": "116",
+   "query": "كرك",
+   "type": "arabic",
+   "expected": [
+    "karak_tea"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Alokozay Karak Tea Bags"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Alokozay Karak Tea Bags"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Alokozay Karak Tea Bags"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "كرك:sure"
+   ]
+  },
+  {
+   "id": "117",
+   "query": "قهوة عربية",
+   "type": "arabic",
+   "expected": [
+    "arabic_coffee"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Light Roast Arabic Coffee"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Ameed Arabic Coffee with Cardamom"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Ameed Arabic Coffee with Cardamom"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "قهوة:sure",
+    "عربية:sure"
+   ]
+  },
+  {
+   "id": "118",
+   "query": "عصير برتقال",
+   "type": "arabic",
+   "expected": [
+    "juice"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Rawabi Fresh Orange Juice"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Rawabi Fresh Orange Juice"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Rawabi Fresh Orange Juice"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "عصير:sure",
+    "برتقال:sure"
+   ]
+  },
+  {
+   "id": "119",
+   "query": "مسحوق غسيل",
+   "type": "arabic",
+   "expected": [
+    "detergent"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Ariel Washing Powder"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Ariel Washing Powder"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Ariel Washing Powder"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "مسحوق:sure",
+    "غسيل:sure"
+   ]
+  },
+  {
+   "id": "120",
+   "query": "حمص",
+   "type": "arabic",
+   "expected": [
+    "chickpeas",
+    "hummus"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Kabuli Chickpeas Dry"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Kabuli Chickpeas Dry"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Kabuli Chickpeas Dry"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "حمص:guessed"
+   ]
+  },
+  {
+   "id": "121",
+   "query": "معكرونه",
+   "type": "arabic",
+   "expected": [
+    "pasta"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Emirates Elbow Macaroni"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Emirates Elbow Macaroni"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "معكرونه:sure"
+   ]
+  },
+  {
+   "id": "122",
+   "query": "fresh doodh",
+   "type": "mixed",
+   "expected": [
+    "milk"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Full Fat Fresh Milk"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Full Fat Fresh Milk"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "fresh:sure",
+    "doodh:sure"
+   ]
+  },
+  {
+   "id": "123",
+   "query": "almarai laban",
+   "type": "mixed",
+   "expected": [
+    "laban"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Laban Full Fat"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Laban Full Fat"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Laban Full Fat"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "almarai:sure",
+    "laban:sure"
+   ]
+  },
+  {
+   "id": "124",
+   "query": "dahi almarai",
+   "type": "mixed",
+   "expected": [
+    "yogurt"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Almarai Full Fat Fresh Milk"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Fresh Yoghurt Full Fat"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "dahi:sure",
+    "almarai:sure"
+   ]
+  },
+  {
+   "id": "125",
+   "query": "7aleeb 1 litre",
+   "type": "mixed",
+   "expected": [
+    "milk"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Almarai Full Fat Fresh Milk"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "7aleeb:sure"
+   ]
+  },
+  {
+   "id": "126",
+   "query": "chawal بسمتي",
+   "type": "mixed",
+   "expected": [
+    "rice"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "India Gate Classic Basmati Rice"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "India Gate Classic Basmati Rice"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "chawal:sure",
+    "بسمتي:sure"
+   ]
+  },
+  {
+   "id": "127",
+   "query": "karak chai",
+   "type": "mixed",
+   "expected": [
+    "karak_tea"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Alokozay Karak Tea Bags"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Alokozay Karak Tea Bags"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "karak:sure",
+    "chai:sure"
+   ]
+  },
+  {
+   "id": "128",
+   "query": "zaitoon ka tel",
+   "type": "mixed",
+   "expected": [
+    "olive_oil"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Wadi Al Akhdar Extra Virgin Olive Oil"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "zaitoon:sure",
+    "ka:sure",
+    "tel:sure"
+   ]
+  },
+  {
+   "id": "129",
+   "query": "anday 30 pcs",
+   "type": "mixed",
+   "expected": [
+    "eggs"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Jazira Fresh White Eggs Large"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "anday:sure"
+   ]
+  },
+  {
+   "id": "130",
+   "query": "murgh fillet",
+   "type": "mixed",
+   "expected": [
+    "chicken"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Sadia Chicken Breast Fillet"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Sadia Chicken Breast Fillet"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "murgh:sure",
+    "fillet:sure"
+   ]
+  },
+  {
+   "id": "131",
+   "query": "basmati chawal 10kg",
+   "type": "mixed",
+   "expected": [
+    "rice"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "India Gate Classic Basmati Rice"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Daawat Traditional Basmati Rice"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "basmati:sure",
+    "chawal:sure"
+   ]
+  },
+  {
+   "id": "132",
+   "query": "khubz arabic",
+   "type": "mixed",
+   "expected": [
+    "bread"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Modern Bakery Arabic Bread White"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Modern Bakery Arabic Bread White"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "khubz:sure",
+    "arabic:sure"
+   ]
+  },
+  {
+   "id": "133",
+   "query": "atta whole wheat",
+   "type": "mixed",
+   "expected": [
+    "atta",
+    "flour"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Aashirvaad Whole Wheat Atta"
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Al Islami Frozen Whole Chicken"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Aashirvaad Whole Wheat Atta"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "atta:sure",
+    "whole:sure",
+    "wheat:sure"
+   ]
+  },
+  {
+   "id": "134",
+   "query": "ghee amul",
+   "type": "mixed",
+   "expected": [
+    "ghee"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Amul Pure Ghee"
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Amul Fresh Paneer"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Amul Pure Ghee"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "ghee:sure",
+    "amul:sure"
+   ]
+  },
+  {
+   "id": "135",
+   "query": "lipton chai",
+   "type": "mixed",
+   "expected": [
+    "tea"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Lipton Yellow Label Black Tea Bags"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Lipton Yellow Label Black Tea Bags"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "lipton:sure",
+    "chai:sure"
+   ]
+  },
+  {
+   "id": "136",
+   "query": "aam ka juice",
+   "type": "mixed",
+   "expected": [
+    "juice"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Rawabi Fresh Orange Juice"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Rawabi Fresh Orange Juice"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "aam:sure",
+    "juice:sure"
+   ]
+  },
+  {
+   "id": "137",
+   "query": "hari mirch 250g",
+   "type": "mixed",
+   "expected": [
+    "green_chili"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Green Chilli"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "hari:sure",
+    "mirch:sure"
+   ]
+  },
+  {
+   "id": "138",
+   "query": "dahi ٥٠٠ جرام",
+   "type": "mixed",
+   "expected": [
+    "yogurt"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": false,
+     "zero": false,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "National Garam Masala"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Al Rawabi Plain Yoghurt"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "dahi:sure"
+   ]
+  },
+  {
+   "id": "139",
+   "query": "halib nido",
+   "type": "mixed",
+   "expected": [
+    "milk"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Nido Fortified Milk Powder"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Nido Fortified Milk Powder"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "halib:sure",
+    "nido:sure"
+   ]
+  },
+  {
+   "id": "140",
+   "query": "sabun dettol",
+   "type": "mixed",
+   "expected": [
+    "soap"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": false,
+     "zero": true,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Dettol Original Soap Bar"
+    },
+    "ours": {
+     "hit3": true,
+     "zero": false,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": "Dettol Original Soap Bar"
+    }
+   },
+   "seen": true,
+   "chips": [
+    "sabun:sure",
+    "dettol:sure"
+   ]
+  },
+  {
+   "id": "141",
+   "query": "pizza",
+   "type": "english",
+   "expected": [
+    "NONE"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": null
+    }
+   },
+   "seen": false,
+   "chips": [
+    "pizza:unknown"
+   ]
+  },
+  {
+   "id": "142",
+   "query": "toothpaste",
+   "type": "english",
+   "expected": [
+    "NONE"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": null
+    }
+   },
+   "seen": false,
+   "chips": [
+    "toothpaste:unknown"
+   ]
+  },
+  {
+   "id": "143",
+   "query": "diapers",
+   "type": "english",
+   "expected": [
+    "NONE"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Khalas Dates"
+    },
+    "ours": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": null
+    }
+   },
+   "seen": false,
+   "chips": [
+    "diapers:unknown"
+   ]
+  },
+  {
+   "id": "144",
+   "query": "nihari",
+   "type": "roman_urdu",
+   "expected": [
+    "NONE"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Sindhri Mango Pakistan"
+    },
+    "ours": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": null
+    }
+   },
+   "seen": false,
+   "chips": [
+    "nihari:unknown"
+   ]
+  },
+  {
+   "id": "145",
+   "query": "gulab jamun",
+   "type": "roman_urdu",
+   "expected": [
+    "NONE"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": null
+    }
+   },
+   "seen": false,
+   "chips": [
+    "gulab:unknown",
+    "jamun:unknown"
+   ]
+  },
+  {
+   "id": "146",
+   "query": "paan",
+   "type": "roman_urdu",
+   "expected": [
+    "NONE"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Almarai Laban Full Fat"
+    },
+    "ours": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": "Masafi Mineral Water"
+    }
+   },
+   "seen": false,
+   "chips": [
+    "paan:guessed"
+   ]
+  },
+  {
+   "id": "147",
+   "query": "shawarma",
+   "type": "arabizi",
+   "expected": [
+    "NONE"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "ours": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": null
+    }
+   },
+   "seen": false,
+   "chips": [
+    "shawarma:unknown"
+   ]
+  },
+  {
+   "id": "148",
+   "query": "machboos",
+   "type": "arabizi",
+   "expected": [
+    "NONE"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Mahmood Sella Basmati Rice"
+    },
+    "ours": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": null
+    }
+   },
+   "seen": false,
+   "chips": [
+    "machboos:unknown"
+   ]
+  },
+  {
+   "id": "149",
+   "query": "شاورما",
+   "type": "arabic",
+   "expected": [
+    "NONE"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Kraft Cheddar Cheese Slices"
+    },
+    "ours": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": null
+    }
+   },
+   "seen": false,
+   "chips": [
+    "شاورما:unknown"
+   ]
+  },
+  {
+   "id": "150",
+   "query": "كنافة",
+   "type": "arabic",
+   "expected": [
+    "NONE"
+   ],
+   "systems": {
+    "keyword": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": false,
+     "top": null
+    },
+    "fuzzy": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": true,
+     "flagged": false,
+     "top": "Americana Chicken Nuggets"
+    },
+    "ours": {
+     "hit3": null,
+     "zero": null,
+     "silent_wrong": false,
+     "flagged": true,
+     "top": null
+    }
+   },
+   "seen": false,
+   "chips": [
+    "كنافة:unknown"
+   ]
+  }
+ ],
+ "summary": {
+  "n_queries": 150,
+  "n_matchable": 140,
+  "n_no_match": 10,
+  "overall": {
+   "keyword": {
+    "hit3": 17.1,
+    "zero": 82.1,
+    "silent_wrong": 2.0
+   },
+   "fuzzy": {
+    "hit3": 44.3,
+    "zero": 17.1,
+    "silent_wrong": 44.0
+   },
+   "ours": {
+    "hit3": 100.0,
+    "zero": 0.0,
+    "silent_wrong": 1.3
+   }
+  },
+  "by_type": {
+   "english": {
+    "n": 28,
+    "keyword": {
+     "hit3": 36.0,
+     "zero": 64.0,
+     "silent_wrong": 0.0
+    },
+    "fuzzy": {
+     "hit3": 88.0,
+     "zero": 4.0,
+     "silent_wrong": 21.4
+    },
+    "ours": {
+     "hit3": 100.0,
+     "zero": 0.0,
+     "silent_wrong": 0.0
+    }
+   },
+   "roman_urdu": {
+    "n": 45,
+    "keyword": {
+     "hit3": 2.4,
+     "zero": 97.6,
+     "silent_wrong": 0.0
+    },
+    "fuzzy": {
+     "hit3": 14.3,
+     "zero": 28.6,
+     "silent_wrong": 57.8
+    },
+    "ours": {
+     "hit3": 100.0,
+     "zero": 0.0,
+     "silent_wrong": 2.2
+    }
+   },
+   "arabizi": {
+    "n": 35,
+    "keyword": {
+     "hit3": 0.0,
+     "zero": 97.0,
+     "silent_wrong": 2.9
+    },
+    "fuzzy": {
+     "hit3": 9.1,
+     "zero": 21.2,
+     "silent_wrong": 68.6
+    },
+    "ours": {
+     "hit3": 100.0,
+     "zero": 0.0,
+     "silent_wrong": 2.9
+    }
+   },
+   "arabic": {
+    "n": 23,
+    "keyword": {
+     "hit3": 52.4,
+     "zero": 47.6,
+     "silent_wrong": 8.7
+    },
+    "fuzzy": {
+     "hit3": 85.7,
+     "zero": 0.0,
+     "silent_wrong": 26.1
+    },
+    "ours": {
+     "hit3": 100.0,
+     "zero": 0.0,
+     "silent_wrong": 0.0
+    }
+   },
+   "mixed": {
+    "n": 19,
+    "keyword": {
+     "hit3": 15.8,
+     "zero": 84.2,
+     "silent_wrong": 0.0
+    },
+    "fuzzy": {
+     "hit3": 68.4,
+     "zero": 21.1,
+     "silent_wrong": 21.1
+    },
+    "ours": {
+     "hit3": 100.0,
+     "zero": 0.0,
+     "silent_wrong": 0.0
+    }
+   }
+  },
+  "ours_seen_unseen": {
+   "seen": {
+    "n": 102,
+    "hit3": 100.0
+   },
+   "unseen": {
+    "n": 38,
+    "hit3": 100.0
+   }
+  },
+  "no_match": {
+   "keyword": {
+    "returned_nothing": 10,
+    "silent_wrong": 0
+   },
+   "fuzzy": {
+    "returned_nothing": 4,
+    "silent_wrong": 6
+   },
+   "ours": {
+    "returned_nothing": 9,
+    "silent_wrong": 0
+   }
+  }
+ }
+}

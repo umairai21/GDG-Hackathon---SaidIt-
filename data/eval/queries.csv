@@ -1,0 +1,151 @@
+id,query,type,expected
+1,milk,english,milk
+2,yoghurt,english,yogurt
+3,yougurt 1kg,english,yogurt
+4,basmati rice 5kg,english,rice
+5,arabic bread,english,bread
+6,chiken breast,english,chicken
+7,tomatos,english,tomato
+8,potatos,english,potato
+9,onoin,english,onion
+10,bananna,english,banana
+11,cardamon,english,cardamom
+12,tumeric,english,turmeric
+13,corriander,english,coriander
+14,olive oil 1 litre,english,olive_oil
+15,washing powder,english,detergent
+16,green chillies,english,green_chili
+17,brinjal,english,eggplant
+18,lady finger,english,okra
+19,curd,english,yogurt
+20,cheddar slices,english,cheese
+21,mineral water 1.5L,english,water
+22,karak tea,english,karak_tea
+23,medjool dates,english,dates
+24,hummus,english,hummus|chickpeas
+25,instant coffee,english,coffee
+26,dahi,roman_urdu,yogurt
+27,dahee,roman_urdu,yogurt
+28,doodh 2 litre,roman_urdu,milk
+29,dudh,roman_urdu,milk
+30,chaawal,roman_urdu,rice
+31,anday 1 dozen,roman_urdu,eggs
+32,andey,roman_urdu,eggs
+33,murghi,roman_urdu,chicken
+34,gosht,roman_urdu,meat
+35,machhli,roman_urdu,fish
+36,atta 10 kilo,roman_urdu,atta|flour
+37,cheeni 2 kilo,roman_urdu,sugar
+38,namak,roman_urdu,salt
+39,piyaaz,roman_urdu,onion
+40,tamaatar,roman_urdu,tomato
+41,aaloo,roman_urdu,potato
+42,lehsan,roman_urdu,garlic
+43,adrak,roman_urdu,ginger
+44,nimbu,roman_urdu,lemon
+45,hari mirch,roman_urdu,green_chili
+46,dhanya,roman_urdu,coriander
+47,pudeena,roman_urdu,mint
+48,bhindi,roman_urdu,okra
+49,bengun,roman_urdu,eggplant
+50,palak,roman_urdu,spinach
+51,kelay,roman_urdu,banana
+52,khujoor,roman_urdu,dates
+53,ilaychi,roman_urdu,cardamom
+54,haldi,roman_urdu,turmeric
+55,jeera,roman_urdu,cumin
+56,daal masoor,roman_urdu,lentils
+57,chanay,roman_urdu,chickpeas
+58,rajma,roman_urdu,kidney_beans
+59,desi ghee,roman_urdu,ghee
+60,makhan,roman_urdu,butter
+61,chai patti,roman_urdu,tea
+62,doodh patti,roman_urdu,tea
+63,sabun,roman_urdu,soap
+64,surf,roman_urdu,detergent
+65,cold drink,roman_urdu,soft_drink
+66,double roti,roman_urdu,bread
+67,parathay,roman_urdu,paratha
+68,3eish,arabizi,rice|bread
+69,3aish,arabizi,rice|bread
+70,5obz,arabizi,bread
+71,7aleeb,arabizi,milk
+72,7lib,arabizi,milk
+73,leban,arabizi,laban
+74,laban zabadi,arabizi,yogurt
+75,rob,arabizi,yogurt
+76,lebne,arabizi,labneh
+77,jebneh,arabizi,cheese
+78,zibda,arabizi,butter
+79,baidh,arabizi,eggs
+80,djej,arabizi,chicken
+81,la7am,arabizi,meat
+82,samak,arabizi,fish
+83,roz,arabizi,rice
+84,mel7,arabizi,salt
+85,zeit zaitoon,arabizi,olive_oil
+86,ba9al,arabizi,onion
+87,6ama6,arabizi,tomato
+88,toum,arabizi,garlic
+89,laimoon,arabizi,lemon
+90,5iyar,arabizi,cucumber
+91,batinjan,arabizi,eggplant
+92,tuffa7,arabizi,apple
+93,ra6ab,arabizi,dates
+94,bateekh,arabizi,watermelon
+95,shai,arabizi,tea
+96,8ahwa,arabizi,arabic_coffee
+97,3asal,arabizi,honey
+98,3aseer burtuqal,arabizi,juice
+99,bebsi,arabizi,soft_drink
+100,chibs,arabizi,chips
+101,حليب,arabic,milk
+102,الحليب ٢ لتر,arabic,milk
+103,لبن,arabic,laban
+104,روب,arabic,yogurt
+105,زبده,arabic,butter
+106,بيض ٣٠ حبة,arabic,eggs
+107,فراخ,arabic,chicken
+108,صيد,arabic,fish
+109,عيش,arabic,rice|bread
+110,الأرز البسمتي,arabic,rice
+111,طحين,arabic,flour
+112,زيت زيتون,arabic,olive_oil
+113,طماط,arabic,tomato
+114,كزبره,arabic,coriander
+115,شاهي,arabic,tea
+116,كرك,arabic,karak_tea
+117,قهوة عربية,arabic,arabic_coffee
+118,عصير برتقال,arabic,juice
+119,مسحوق غسيل,arabic,detergent
+120,حمص,arabic,hummus|chickpeas
+121,معكرونه,arabic,pasta
+122,fresh doodh,mixed,milk
+123,almarai laban,mixed,laban
+124,dahi almarai,mixed,yogurt
+125,7aleeb 1 litre,mixed,milk
+126,chawal بسمتي,mixed,rice
+127,karak chai,mixed,karak_tea
+128,zaitoon ka tel,mixed,olive_oil
+129,anday 30 pcs,mixed,eggs
+130,murgh fillet,mixed,chicken
+131,basmati chawal 10kg,mixed,rice
+132,khubz arabic,mixed,bread
+133,atta whole wheat,mixed,atta|flour
+134,ghee amul,mixed,ghee
+135,lipton chai,mixed,tea
+136,aam ka juice,mixed,juice
+137,hari mirch 250g,mixed,green_chili
+138,dahi ٥٠٠ جرام,mixed,yogurt
+139,halib nido,mixed,milk
+140,sabun dettol,mixed,soap
+141,pizza,english,NONE
+142,toothpaste,english,NONE
+143,diapers,english,NONE
+144,nihari,roman_urdu,NONE
+145,gulab jamun,roman_urdu,NONE
+146,paan,roman_urdu,NONE
+147,shawarma,arabizi,NONE
+148,machboos,arabizi,NONE
+149,شاورما,arabic,NONE
+150,كنافة,arabic,NONE

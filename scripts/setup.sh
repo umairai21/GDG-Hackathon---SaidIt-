@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+# One-time setup: Python deps, build the web app, run the evaluation.
+set -e
+cd "$(dirname "$0")/.."
+pip install -r backend/requirements-dev.txt
+(cd frontend && npm install && npm run build)
+python eval/run_eval.py > /dev/null
+echo "Setup done. Start with: sh scripts/start.sh"
