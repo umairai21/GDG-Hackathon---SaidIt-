@@ -2,6 +2,8 @@
 
 **Grocery search for how the UAE actually types, and it shows you how it read you.**
 
+▶ **Want to run it?** Jump to [How to run it](#how-to-run-it). It takes about five minutes.
+
 ## The problem
 
 Grocery apps in the UAE are built on clean English and Arabic product names. Real customers
@@ -135,32 +137,90 @@ after the first run: [eval/results.md](eval/results.md).
 
 **Reproduce:** `python eval/run_eval.py`
 
-## Run it
+## How to run it
 
-Needs Python 3.11+ and Node 18+. Everything runs **offline** after setup, with no API keys.
+**You need:** [Git](https://git-scm.com), [Python 3.11+](https://www.python.org/downloads/) and
+[Node.js 18+](https://nodejs.org). No API keys. After the one-time install, it runs fully offline.
+
+### 1. Get the code
 
 ```sh
-pip install -r backend/requirements-dev.txt          # 1. Python deps
-cd frontend && npm install && npm run build && cd ..  # 2. build the web app
-python eval/run_eval.py                                # 3. evaluation (writes eval/results.*)
-python -m uvicorn app.main:app --app-dir backend --port 8000   # 4. open http://localhost:8000
+git clone https://github.com/umairai21/GDG-Hackathon---SaidIt-.git
+cd GDG-Hackathon---SaidIt-
 ```
 
-Or use the scripts: `scripts/setup.sh` then `scripts/start.sh` (Windows: `scripts\setup.ps1`, `scripts\start.ps1`).
+### 2. Install and build (first time only)
 
-- Start page: <http://localhost:8000/> (choose customer or store manager) · Customer search: <http://localhost:8000/shop> · Store dashboard: <http://localhost:8000/store> (password)
-- On first start the database is seeded with two weeks of realistic search history.
-  Reset it before a demo: `python backend/app/seed.py --reset` (or `scripts/reset-demo`).
-- Tests: `python -m pytest`
-- Try the pipeline in the terminal: `python backend/scripts/demo_queries.py "dahi 1kg" 3eish`
-- Frontend dev mode with hot reload: run the uvicorn command above, then `cd frontend && npm run dev`
-  (proxies API calls to :8000).
+**Windows (PowerShell)**
 
-**Store manager password:** `store123` by default. Change it with `SAIDIT_MANAGER_PASSWORD`.
-Customers never sign in.
+```powershell
+python -m pip install -r backend/requirements-dev.txt
+cd frontend; npm install; npm run build; cd ..
+python eval/run_eval.py
+```
 
-Settings (environment variables): `SAIDIT_MANAGER_PASSWORD` (dashboard password), `SAIDIT_CONFIRMATIONS` (clicks needed to propose a mapping, default 3),
-`SAIDIT_DB` (database path), `SAIDIT_NO_SEED=1` (start with an empty database).
+**macOS / Linux**
+
+```sh
+python3 -m pip install -r backend/requirements-dev.txt
+cd frontend && npm install && npm run build && cd ..
+python3 eval/run_eval.py
+```
+
+This installs the Python packages, builds the web app, and runs the evaluation (which fills in the
+test results shown on the dashboard). Or run it all with one script: `scripts\setup.ps1` on Windows,
+`sh scripts/setup.sh` on macOS/Linux.
+
+### 3. Start the app
+
+```sh
+python -m uvicorn app.main:app --app-dir backend --port 8000
+```
+
+(`python3` instead of `python` on macOS/Linux.) Wait until you see
+`Uvicorn running on http://127.0.0.1:8000`, and keep this terminal open while you use the app.
+
+### 4. Open it
+
+Go to **<http://localhost:8000>** and choose:
+
+- **I'm a customer**: search for groceries, e.g. `dahi 1kg`, `3eish`, `karak chai`, `الحليب ٢ لتر`.
+- **I'm the store manager**: sign in with the password **`store123`** to open the dashboard.
+
+To stop the app, press `Ctrl+C` in the terminal. Next time, you only need step 3.
+
+The first start fills the database with two weeks of example search history, so the dashboard
+has something to show.
+
+### Useful commands
+
+| What | Command |
+|---|---|
+| Reset the demo data (stop the app first) | `python backend/app/seed.py --reset` |
+| Run the tests | `python -m pytest` |
+| Re-run the evaluation | `python eval/run_eval.py` |
+| See how the pipeline reads a query, in the terminal | `python backend/scripts/demo_queries.py "dahi 1kg" 3eish` |
+| Frontend development with hot reload | start the app (step 3), then `cd frontend && npm run dev` |
+
+### Settings
+
+Set these as environment variables before step 3 (PowerShell: `$env:NAME = "value"`,
+macOS/Linux: `export NAME=value`).
+
+| Variable | Default | What it does |
+|---|---|---|
+| `SAIDIT_MANAGER_PASSWORD` | `store123` | Store manager password. Change it if anyone else can reach your app. |
+| `SAIDIT_CONFIRMATIONS` | `3` | Shopper clicks needed before a word is suggested to the manager |
+| `SAIDIT_DB` | `backend/saidit.db` | Where the database file is stored |
+| `SAIDIT_NO_SEED` | unset | Set to `1` to start with an empty database |
+
+### If something goes wrong
+
+- **`python` / `pip` not found:** install Python and tick *Add Python to PATH*, or use `python3` (macOS/Linux) / `py` (Windows).
+- **"Port 8000 is already in use":** the app is already running somewhere, or another program has the port. Use `--port 8001` and open `localhost:8001`.
+- **Blank page or `{"detail":"Not Found"}`:** the web app hasn't been built. Run the `npm install` / `npm run build` line from step 2.
+- **PowerShell won't run `scripts\setup.ps1`:** run `Set-ExecutionPolicy -Scope Process Bypass` first, in the same window.
+- **You still see an older version after updating:** restart the app (step 3) and press `Ctrl+F5` in the browser once.
 
 ### Try it in two minutes
 
@@ -173,20 +233,6 @@ Settings (environment variables): `SAIDIT_MANAGER_PASSWORD` (dashboard password)
    and the change is in **Recent activity** with an Undo.
 
 Reset the demo data afterwards with `python backend/app/seed.py --reset`.
-
-### Share a live demo link
-
-The app is one server on port 8000, so a tunnel is enough. With [ngrok](https://ngrok.com):
-
-```sh
-# set your own manager password first: the default one is published in this README
-$env:SAIDIT_MANAGER_PASSWORD = "choose-something"   # PowerShell  (bash: export SAIDIT_MANAGER_PASSWORD=...)
-python -m uvicorn app.main:app --app-dir backend --port 8000
-ngrok http 8000                                       # in a second terminal; share the https URL it prints
-```
-
-The free ngrok plan shows visitors a one-time "You are about to visit" page; they click **Visit Site**.
-The link stops working when ngrok or the app stops, and changes each time ngrok restarts.
 
 ### API
 
