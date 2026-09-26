@@ -10,13 +10,13 @@ from contextlib import asynccontextmanager
 from pathlib import Path
 from typing import Literal
 
-from fastapi import FastAPI, HTTPException
+from fastapi import Depends, FastAPI, HTTPException, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from app import store
+from app import auth, store
 from app.seed import seed
 from baselines import fuzzy_search
 from pipeline import interpret
@@ -42,6 +42,10 @@ app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], all
 
 class SearchIn(BaseModel):
     query: str = Field(max_length=200)
+
+
+class LoginIn(BaseModel):
+    password: str = Field(max_length=200)
 
 
 class FeedbackIn(BaseModel):
@@ -75,7 +79,32 @@ def feedback(body: FeedbackIn) -> dict:
     return {"ok": True, "confirmations": confirmations}
 
 
-@app.get("/store/words")
+# ---------------------------------------------------------------- store manager sign-in
+
+@app.post("/auth/login")
+def login(body: LoginIn, response: Response) -> dict:
+    if not auth.check_password(body.password):
+        raise HTTPException(401, "wrong password")
+    auth.start_session(response)
+    return {"manager": True}
+
+
+@app.post("/auth/logout")
+def logout(request: Request, response: Response) -> dict:
+    auth.end_session(request, response)
+    return {"manager": False}
+
+
+@app.get("/auth/me")
+def me(request: Request) -> dict:
+    return {"manager": auth.is_manager(request)}
+
+
+# ---------------------------------------------------------------- store manager API (sign-in required)
+manager_only = [Depends(auth.require_manager)]
+
+
+@app.get("/store/words", dependencies=manager_only)
 def store_words() -> dict:
     concepts = default_resources().concepts
     with store.connect() as conn:
@@ -96,17 +125,17 @@ def _set(mapping_id: int, status: str) -> dict:
     return row
 
 
-@app.post("/store/mappings/{mapping_id}/approve")
+@app.post("/store/mappings/{mapping_id}/approve", dependencies=manager_only)
 def approve(mapping_id: int) -> dict:
     return _set(mapping_id, store.APPROVED)
 
 
-@app.post("/store/mappings/{mapping_id}/remove")
+@app.post("/store/mappings/{mapping_id}/remove", dependencies=manager_only)
 def remove(mapping_id: int) -> dict:
     return _set(mapping_id, store.REMOVED)
 
 
-@app.get("/store/changelog")
+@app.get("/store/changelog", dependencies=manager_only)
 def changelog() -> list[dict]:
     with store.connect() as conn:
         return store.changelog(conn)
@@ -126,4 +155,8 @@ if FRONTEND_DIST.exists():
     @app.get("/{path:path}", include_in_schema=False)
     def spa(path: str) -> FileResponse:
         file = FRONTEND_DIST / path
-        return FileResponse(file if path and file.is_file() else FRONTEND_DIST / "index.html")
+        if path and file.is_file():
+            return FileResponse(file)
+        # Why no-cache: index.html points at the current build's JS. If a browser keeps an old
+        # copy, it runs the previous version of the app against the new API.
+        return FileResponse(FRONTEND_DIST / "index.html", headers={"Cache-Control": "no-cache"})

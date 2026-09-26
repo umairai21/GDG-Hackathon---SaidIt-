@@ -16,14 +16,31 @@ decides the store doesn't stock it and leaves. The store never finds out it lost
 
 1. **A search pipeline** that understands code-switched, spelled-by-ear and wrong-script queries.
    It has 8 small deterministic stages, with no LLM and no API key.
-2. **A customer view that never corrects silently.** Every word becomes a chip: 🟢 sure,
-   🟡 guessed (with a similarity score), 🔴 unknown (kept as typed). Hover a chip to see
+2. **A customer view that never corrects silently, in plain shop language.** It says
+   "Showing results for yogurt" and only raises a note when it's unsure: "We think *leban*
+   means laban. Not right?", "*3eish* can mean rice or bread. Which one?", or "We don't know
+   *nihari* yet, so we didn't replace it with a guess." One click on **How we read your search**
+   opens the full per-word view: 🟢 sure / 🟡 guessed (with a similarity score) / 🔴 unknown, and
    *original → normalized → meaning → language → which rule decided it*.
    A toggle shows what a normal store search returns for the same query, side by side.
-3. **A store dashboard** listing the words customers use that the catalog doesn't know, which of
-   them are costing sales, and mappings learned from customer clicks. A learned mapping is only
-   *proposed*; search doesn't use it until the store clicks **Approve**, and every change is in a
-   change log.
+3. **A store dashboard** (manager sign-in required) with: headline numbers, the **suggestions to
+   review** (Approve / Dismiss), a **search quality** chart (typical search vs ours), the **top
+   missed searches** (words that ended in zero results), a **recent activity** log, and a **word
+   insights** table. A learned mapping is only *proposed*; search doesn't use it until the manager
+   clicks **Approve**, and every change is logged with who made it.
+
+### Two sides, one app
+
+The start page asks who you are.
+
+| | Customer | Store manager |
+|---|---|---|
+| Gets to | Search (`/shop`), no sign-in | Dashboard (`/store`) after the manager password, **and** a *Customer view* switch to see what shoppers see |
+| Can reach the other side? | Only the manager **sign-in screen** (top-right button). Dashboard data is refused by the server (401) without a manager session | Yes, via the Dashboard / Customer view switch |
+| Leaving | n/a | **Sign out** returns to the start page |
+
+The two sides share **data**, not navigation: customer searches and clicks feed the dashboard, and
+the manager's approvals change what customers see.
 
 ### How it addresses both themes
 
@@ -131,7 +148,7 @@ python -m uvicorn app.main:app --app-dir backend --port 8000   # 4. open http://
 
 Or use the scripts: `scripts/setup.sh` then `scripts/start.sh` (Windows: `scripts\setup.ps1`, `scripts\start.ps1`).
 
-- Customer search: <http://localhost:8000/> · Store dashboard: <http://localhost:8000/store>
+- Start page: <http://localhost:8000/> (choose customer or store manager) · Customer search: <http://localhost:8000/shop> · Store dashboard: <http://localhost:8000/store> (password)
 - On first start the database is seeded with two weeks of realistic search history.
   Reset it before a demo: `python backend/app/seed.py --reset` (or `scripts/reset-demo`).
 - Tests: `python -m pytest`
@@ -139,8 +156,37 @@ Or use the scripts: `scripts/setup.sh` then `scripts/start.sh` (Windows: `script
 - Frontend dev mode with hot reload: run the uvicorn command above, then `cd frontend && npm run dev`
   (proxies API calls to :8000).
 
-Settings (environment variables): `SAIDIT_CONFIRMATIONS` (clicks needed to propose a mapping, default 3),
+**Store manager password:** `store123` by default. Change it with `SAIDIT_MANAGER_PASSWORD`.
+Customers never sign in.
+
+Settings (environment variables): `SAIDIT_MANAGER_PASSWORD` (dashboard password), `SAIDIT_CONFIRMATIONS` (clicks needed to propose a mapping, default 3),
 `SAIDIT_DB` (database path), `SAIDIT_NO_SEED=1` (start with an empty database).
+
+### Try it in two minutes
+
+1. Open the start page, choose **I'm a customer**, and search `3eish`. It can mean rice *or* bread,
+   so you get both and a "Which one?" choice. Tick **Compare with a typical store search**: the
+   typical search shows eggs.
+2. Search `leban` (a guess, shown as one), then `nihari` (not stocked: we say so instead of guessing).
+3. Click **Store manager sign-in** (top right), enter the password, and approve **3eish → rice**.
+4. Switch to **Customer view** and search `3eish` again: it now reads as rice, "approved by the store",
+   and the change is in **Recent activity** with an Undo.
+
+Reset the demo data afterwards with `python backend/app/seed.py --reset`.
+
+### Share a live demo link
+
+The app is one server on port 8000, so a tunnel is enough. With [ngrok](https://ngrok.com):
+
+```sh
+# set your own manager password first: the default one is published in this README
+$env:SAIDIT_MANAGER_PASSWORD = "choose-something"   # PowerShell  (bash: export SAIDIT_MANAGER_PASSWORD=...)
+python -m uvicorn app.main:app --app-dir backend --port 8000
+ngrok http 8000                                       # in a second terminal; share the https URL it prints
+```
+
+The free ngrok plan shows visitors a one-time "You are about to visit" page; they click **Visit Site**.
+The link stops working when ngrok or the app stops, and changes each time ngrok restarts.
 
 ### API
 
@@ -148,10 +194,13 @@ Settings (environment variables): `SAIDIT_CONFIRMATIONS` (clicks needed to propo
 |---|---|---|
 | POST | `/search` `{query}` | `{tokens: [explanation…], quantity, summary, results, baseline_results}` |
 | POST | `/feedback` `{query, product_id, type}` | `type`: `click` or `not_what_i_meant`. Clicks on 🟡/🔴 words add confirmations |
-| GET | `/store/words` | unfamiliar words, lost-sale flags, all learned mappings |
-| POST | `/store/mappings/{id}/approve` · `/remove` | the only way a learned mapping changes search |
-| GET | `/store/changelog` | every proposal / approval / removal, newest first |
+| POST | `/auth/login` `{password}` · `/auth/logout` · GET `/auth/me` | store-manager sign-in (HttpOnly session cookie) |
+| GET | `/store/words` 🔒 | unfamiliar words, lost-sale flags, all learned mappings |
+| POST | `/store/mappings/{id}/approve` · `/remove` 🔒 | the only way a learned mapping changes search |
+| GET | `/store/changelog` 🔒 | every proposal / approval / removal, newest first |
 | GET | `/eval/summary` | the evaluation numbers |
+
+🔒 = needs the store manager to be signed in; returns 401 otherwise.
 
 ## Repository map
 
@@ -164,7 +213,7 @@ backend/tests/       unit tests per stage + API tests
 data/                catalog.json (154 products), concepts.json (71 concepts),
                      lexicons/ (English, Roman Urdu/Hindi, Arabizi, Arabic), eval/queries.csv
 eval/run_eval.py     evaluation; writes eval/results.md, results.json and the table above
-frontend/            React + Vite + Tailwind: customer search (/) and store dashboard (/store)
+frontend/            React + Vite + Tailwind: start page (/), customer search (/shop), store dashboard (/store)
 ```
 
 ## Originality
@@ -184,7 +233,7 @@ learning that is gated by store approval with a public change log.
 
 ## Deliberately not building
 
-- A real store: no cart, checkout, payments, auth or user accounts
+- A real store: no cart, checkout, payments or user accounts (the only sign-in is one shared store-manager password protecting the dashboard)
 - A chatbot or shopping assistant
 - Recommendations or personalization
 - General translation of arbitrary text
@@ -207,4 +256,6 @@ learning that is gated by store approval with a public change log.
 - **The evaluation is self-written** (see above), and the seeded dashboard history is synthetic.
 - **Learning trusts clicks.** Three clicks from one person count the same as three people.
   A real deployment would count distinct shoppers.
+- **Sign-in is demo-grade.** One shared manager password, sessions kept in memory (a server restart
+  signs everyone out), no rate limiting, and plain HTTP on localhost. Fine for a demo, not for production.
 - **Ranking weights are hand-set** (1.0 sure, 0.8 guessed, +0.3 for pack size…), not tuned.

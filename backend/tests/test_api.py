@@ -11,6 +11,8 @@ def client(tmp_path, monkeypatch):
     from fastapi.testclient import TestClient
     from app.main import app
     with TestClient(app) as c:
+        # store endpoints need the manager signed in; the customer ones don't care
+        assert c.post("/auth/login", json={"password": "store123"}).status_code == 200
         yield c
 
 
@@ -76,3 +78,37 @@ def test_bad_requests(client):
     assert client.post("/feedback", json={"query": "x", "product_id": "NOPE", "type": "click"}).status_code == 404
     assert client.post("/store/mappings/999/approve").status_code == 404
     assert client.post("/feedback", json={"query": "x", "type": "hack"}).status_code == 422
+
+
+def test_customer_cannot_use_store_api(client):
+    client.post("/auth/logout")
+    assert client.get("/auth/me").json() == {"manager": False}
+    assert client.get("/store/words").status_code == 401
+    assert client.get("/store/changelog").status_code == 401
+    assert client.post("/store/mappings/1/approve").status_code == 401
+    assert client.post("/store/mappings/1/remove").status_code == 401
+    # customer features keep working without signing in
+    assert client.post("/search", json={"query": "dahi"}).status_code == 200
+
+
+def test_wrong_password_is_rejected(client):
+    client.post("/auth/logout")
+    assert client.post("/auth/login", json={"password": "guess"}).status_code == 401
+    assert client.get("/store/words").status_code == 401
+
+
+def test_manager_session_cookie_is_httponly(client):
+    client.post("/auth/logout")
+    r = client.post("/auth/login", json={"password": "store123"})
+    assert "httponly" in r.headers["set-cookie"].lower()
+    assert client.get("/auth/me").json() == {"manager": True}
+
+
+def test_app_page_is_never_cached(client):
+    # a stale cached page would run the old app against the new API
+    from app.main import FRONTEND_DIST
+    if not FRONTEND_DIST.exists():
+        pytest.skip("frontend not built")
+    for path in ("/", "/shop", "/store"):
+        r = client.get(path)
+        assert r.status_code == 200 and r.headers["cache-control"] == "no-cache"

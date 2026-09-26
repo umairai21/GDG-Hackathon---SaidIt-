@@ -12,6 +12,7 @@ export default defineConfig({
       '/search': api,
       '/feedback': api,
       '/eval': api,
+      '/auth': api,
       '^/store/.+': api,
     },
   },
